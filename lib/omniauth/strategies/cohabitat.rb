@@ -6,9 +6,9 @@ module OmniAuth
       option :name, 'cohabitat'
 
       option :client_options, {
-        :site          => 'https://konto.cohabitat.net/',
-        :token_url     => 'https://konto.cohabitat.net/oauth/token',
-        :authorize_url => 'https://konto.cohabitat.net/oauth/authorize',
+        :site          => "#{ENV["OAUTH2_BASE_URL"] || "https://konto.cohabitat.net"}",
+        :token_url     => "#{ENV["OAUTH2_BASE_URL"] || "https://konto.cohabitat.net"}/oauth/token",
+        :authorize_url => "#{ENV["OAUTH2_BASE_URL"] || "https://konto.cohabitat.net"}/oauth/authorize",
       }
 
       uid { raw_info["id"] }
