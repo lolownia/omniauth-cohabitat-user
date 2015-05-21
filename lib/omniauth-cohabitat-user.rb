@@ -7,4 +7,4 @@ module OmniAuth
   end
 end
 
-OmniAuth.config.add_camelization 'cohabitat-user', 'CohabitatUser'
+OmniAuth.config.add_camelization 'cohabitat_user', 'CohabitatUser'

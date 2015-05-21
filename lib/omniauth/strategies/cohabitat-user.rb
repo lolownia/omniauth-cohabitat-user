@@ -3,12 +3,12 @@ require 'omniauth/strategies/oauth2'
 module OmniAuth
   module Strategies
     class CohabitatUser < OmniAuth::Strategies::OAuth2
-      option :name, 'cohabitat-user'
+      option :name, 'cohabitat_user'
 
       option :client_options, {
-        :site          => "#{ENV["OAUTH2_BASE_URL"] || "https://konto.cohabitat.net"}",
-        :token_url     => "#{ENV["OAUTH2_BASE_URL"] || "https://konto.cohabitat.net"}/oauth/token",
-        :authorize_url => "#{ENV["OAUTH2_BASE_URL"] || "https://konto.cohabitat.net"}/oauth/authorize/User",
+        :site          => "#{ENV["OMNIAUTH_COHABITAT_USER_BASE_URL"] || "https://konto.cohabitat.net"}",
+        :token_url     => "#{ENV["OMNIAUTH_COHABITAT_USER_BASE_URL"] || "https://konto.cohabitat.net"}/oauth/token",
+        :authorize_url => "#{ENV["OMNIAUTH_COHABITAT_USER_BASE_URL"] || "https://konto.cohabitat.net"}/oauth/authorize/User",
       }
 
       uid { raw_info["id"] }
