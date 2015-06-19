@@ -7,8 +7,8 @@ module OmniAuth
 
       option :client_options, {
         :site          => "#{ENV["OMNIAUTH_COHABITAT_USER_BASE_URL"] || "https://konto.cohabitat.net"}",
-        :token_url     => "#{ENV["OMNIAUTH_COHABITAT_USER_BASE_URL"] || "https://konto.cohabitat.net"}/oauth/token",
-        :authorize_url => "#{ENV["OMNIAUTH_COHABITAT_USER_BASE_URL"] || "https://konto.cohabitat.net"}/oauth/authorize/User",
+        :token_url     => "#{ENV["OMNIAUTH_COHABITAT_USER_BASE_URL"] || "https://konto.cohabitat.net"}/oauth2/token",
+        :authorize_url => "#{ENV["OMNIAUTH_COHABITAT_USER_BASE_URL"] || "https://konto.cohabitat.net"}/oauth2/authorize/User",
       }
 
       uid { raw_info["id"] }
