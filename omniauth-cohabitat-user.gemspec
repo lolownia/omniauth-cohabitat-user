@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.description = "Official OmniAuth strategy for users of Cohabitat apps"
 
   s.add_dependency 'omniauth', '~> 1.0'
-  s.add_dependency 'omniauth-oauth2', '~> 1.1'
+  s.add_dependency 'omniauth-oauth2', '1.3.0'
 
   s.files         = `git ls-files`.split("\n")
   s.require_paths = ['lib']
